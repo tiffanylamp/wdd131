@@ -47,19 +47,19 @@ body {
  }
 
  .navigation a:hover {
-    font-weight: 800;
-    font-size: larger;
+    font-weight: 700;
+    text-decoration: underline;
     text-decoration-color: yellow;
  }
   
   /* Main Layout */
   /* Center the main content */
+  /* Makes the grids share space in the main */
+  
   main {
-    /* max-width: 1000px; */
-    margin: 1rem;
     padding: 1rem;
     display: grid;
-    grid-template-columns: 3fr 2fr; /* Make "About Me" larger than "Web Dev Resources" */
+    grid-template-columns: 3fr 2fr;     
     gap: 1rem;
   }
   
@@ -84,18 +84,13 @@ body {
     color: #ffffff;
     text-align: center;
     font-family: 'Merriweather', serif;
-    /* margin-bottom: 1rem; */
 }
 
 .card-title {
     text-align: center;
 }
 
-
-  
   /* Flexbox for about-content and location-content */
-
-    /* text-align: left; */
     .about-content,
   .location-content {
     display: flex;
