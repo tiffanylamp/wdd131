@@ -11,8 +11,6 @@ body {
     font-family: 'Merriweather', serif;
   }
 
-
-  
   /* Header */
   header {
     background-color: #003366;
@@ -47,7 +45,7 @@ body {
  }
 
  .navigation a:hover {
-    font-weight: 700;
+    font-weight: 400;
     text-decoration: underline;
     text-decoration-color: yellow;
  }
