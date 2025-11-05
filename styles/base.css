@@ -1,0 +1,121 @@
+/* Google Fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+  }
+
+  /* Header */
+  header {
+    background-color: #003366;
+    color: white;
+    grid-area: header;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
+  /* Navigation */
+  nav {
+    margin: 0;
+    grid-area: nav;
+    width: 100%;
+ }
+
+ .navigation {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(51, 47, 47);
+    padding: 0;
+    margin: 0;
+ }
+
+ .navigation a {
+    display: block;
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+ }
+
+ .navigation a:hover {
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+ }
+  
+  /* Main Layout */
+  /* Center the main content */
+  /* Makes the grids share space in the main */
+  
+  main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;     
+    gap: 1rem;
+  }
+  
+  /* Card layout */
+  .card {
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  .card-heading {
+    background-color: #003366;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .card h2 {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.card-title {
+    text-align: center;
+}
+
+  /* Flexbox for about-content and location-content */
+    .about-content,
+  .location-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .about-content img,
+  .location-content img {
+    width: 200px;
+    height: auto;
+  }
+  
+  /* Section titles */
+  .card h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
