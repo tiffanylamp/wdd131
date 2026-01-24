@@ -26,12 +26,13 @@ body {
     background-color: var(--light-bg);
 }
 
-/* Header Styles */
+/* Header */
 header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1.5rem 1rem;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
@@ -40,11 +41,51 @@ header h1 {
     margin-bottom: 1rem;
 }
 
-/* Navigation Styles - CSS Flex */
+/* Hamburger menu - Mobile*/
+#hamburger {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+#hamburger .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* X effect when hamburger is open */
+#hamburger.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+#hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px); 
+}
+
+/* Navigation - CSS Flex */
 nav {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+nav.open {
+    display: flex;
 }
 
 nav a {
@@ -63,11 +104,14 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Main Content Styles */
+/* Main Content */
 main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
 main h1 {
@@ -78,16 +122,6 @@ main h1 {
     margin-bottom: 2rem;
     border-bottom: 3px solid var(--accent-color);
     padding-bottom: 0.5rem;
-}
-
-/* CSS Grid for Figures - Mobile View (1 column) */
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-main h1 {
     grid-column: 1;
 }
 
@@ -120,7 +154,7 @@ figcaption {
     background-color: var(--light-bg);
 }
 
-/* Footer Styles */
+/* footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);

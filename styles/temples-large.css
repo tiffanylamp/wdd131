@@ -1,7 +1,7 @@
 /* Media Query for Larger Screens */
 @media (min-width: 768px) {
     
-    /* Header Adjustments */
+    /* Header */
     header {
         padding: 2rem 2rem;
     }
@@ -12,6 +12,7 @@
     
     /* Navigation - Horizontal Flex Layout */
     nav {
+        display: flex !important;
         flex-direction: row;
         justify-content: center;
         gap: 1rem;
@@ -23,7 +24,7 @@
         flex: 0 1 auto;
     }
     
-    /* Main Content - 2 Column Grid */
+    /* Main Content - The 2 Column Grid */
     main {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
@@ -40,7 +41,7 @@
     }
 }
 
-/* Media Query for Even Larger Screens */
+/* Media Query for Extra Larger Screens */
 @media (min-width: 1024px) {
     
     /* Main Content - 3 Column Grid */
