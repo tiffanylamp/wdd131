@@ -32,10 +32,10 @@ header {
     position: relative;
 }
 
-header h1 {
+header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 /* Hamburger menu - Mobile*/
