@@ -1,0 +1,134 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/*  Color Scheme */
+:root {
+    --primary-color: #2c5f7c;
+    --secondary-color: #4a90a4;
+    --accent-color: #d4af37;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --hover-color: #1a3f52;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Navigation Styles - CSS Flex */
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+/* CSS Grid for Figures - Mobile View (1 column) */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+main h1 {
+    grid-column: 1;
+}
+
+figure {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    background-color: var(--light-bg);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
