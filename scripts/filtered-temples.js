@@ -99,11 +99,8 @@ const temples = [
     },
 ];
 
-function createTempleCard(templesArray) {
-    const container = document.querySelector(".temples");
-    container.innerHTML = ""; // Clear existing cards
-
-    templesArray.forEach(temple => {
+function createTempleCard () {
+    temples.forEach(temple => {
         let card = document.createElement("figure");
         let name = document.createElement("h3");
         let location = document.createElement("p");
@@ -124,37 +121,10 @@ function createTempleCard(templesArray) {
         card.appendChild(dedication);
         card.appendChild(area);
         card.appendChild(img);
-
-        container.appendChild(card);
+ 
+        document.querySelector(".temples").appendChild(card);    
     });
 }
 
 createTempleCard();
-
-function filterTemples(filter) {
-    switch(filter) {
-        case "old":
-            createTempleCard(temples.filter(t => new Date(t.dedicated).getFullYear() < 1900));
-            break;
-        case "new":
-            createTempleCard(temples.filter(t => new Date(t.dedicated).getFullYear() > 2000));
-            break;
-        case "large":
-            createTempleCard(temples.filter(t => t.area > 90000));
-            break;
-        case "small":
-            createTempleCard(temples.filter(t => t.area < 10000));
-            break;
-        case "home":
-        default:
-            createTempleCard(temples);
-    }
-}
-
-document.querySelectorAll("nav button").forEach(button => {
-    button.addEventListener("click", () => {
-        const filter = button.getAttribute("data-filter");
-        filterTemples(filter);
-    });
-});
 
