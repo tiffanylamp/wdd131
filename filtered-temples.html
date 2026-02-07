@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="A basic HTML structure example using semantic HTML elements">
+    <meta name="author" content="Tiffany Lalampaa">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h2>Temple Album</h2>
+        <button id="hamburger" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav>
+            <button data-filter="home">Home</button>
+            <button data-filter="old">Old</button>
+            <button data-filter="new">New</button>
+            <button data-filter="large">Large</button>
+            <button data-filter="small">Small</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="temples"></section>
+    </main>
+
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🌻 Tiffany LALAMPAA 🌻 KENYA</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
