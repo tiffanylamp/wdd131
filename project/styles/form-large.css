@@ -1,0 +1,54 @@
+/* Large Screen CSS */
+
+@media only screen and (min-width: 768px) {
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    .form-group label {
+        font-size: 1.2rem;
+    }
+
+    /* Rating Group */
+    .rating-group {
+        gap: 1.5rem;
+    }
+
+    .star-label {
+        font-size: 1.8rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Checkbox Group */
+    .checkbox-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .checkbox-item {
+        flex: 0 0 calc(50% - 1rem);
+    }
+
+    /* Submit Button */
+    input[type="submit"] {
+        width: auto;
+        min-width: 300px;
+        padding: 1rem 3rem;
+    }
+
+    /* Confirmation Page */
+    .confirmation {
+        padding: 3rem;
+    }
+
+    .confirmation h2 {
+        font-size: 2rem;
+    }
+}
