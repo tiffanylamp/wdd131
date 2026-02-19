@@ -85,12 +85,12 @@ p { margin-bottom: 1rem; }
 
 
 /* ===== SKIP LINK (Accessibility) ===== */
-.skip-link {
+/* .skip-link {
   position: absolute;
   top: -100%;
   left: 1rem;
-  background: var(--terracotta);
-  color: var(--#1a1a1a);
+  background: var(--text-dark);
+  color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
   font-weight: 600;
@@ -100,7 +100,7 @@ p { margin-bottom: 1rem; }
 
 .skip-link:focus {
   top: 1rem;
-}
+} */
 
 /* ===== HEADER & NAVIGATION ===== */
 header {
