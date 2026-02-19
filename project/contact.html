@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — TrailsKE</title>
+  <meta name="description" content="Get in touch with TrailsKE. Ask questions about hiking trails near Nairobi, request a trail guide recommendation, or report trail conditions.">
+  <meta name="author" content="Tiffany Lalampaa | WDD 131">
+  <link rel="stylesheet" href="styles/trails.css">
+  <link rel="stylesheet" href="styles/trails-large.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="TrailsKE Home">
+        <span class="logo-icon" aria-hidden="true">⛰️</span>
+        <span class="logo-text">Trails<span>KE</span></span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <h1 id="page-title">Contact TrailsKE</h1>
+      <p>Have a question, a trail tip, or want to report a trail condition? We'd love to hear from you.</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" aria-labelledby="contact-heading">
+      <div class="contact-layout">
+
+        <!-- FORM -->
+        <div>
+          <h2 id="contact-heading">Send Us a Message</h2>
+          <p class="form-intro">Fields marked with <span class="required" aria-label="required">*</span> are required. Your message draft is auto-saved as you type.</p>
+
+          <div id="formSuccess" aria-live="polite"></div>
+
+          <form class="form-section" id="contactForm" novalidate aria-label="Contact form">
+
+            <!-- Name + Email -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="required" aria-label="required">*</span></label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="e.g. Amara Njoroge"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                >
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span class="required" aria-label="required">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="e.g. amara@email.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                >
+              </div>
+            </div>
+
+            <!-- Phone (optional) -->
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="label-optional">(optional)</span></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="e.g. +254 712 345 678"
+                autocomplete="tel"
+              >
+              <p class="form-note">We will only use this to call you if your enquiry requires a quick response.</p>
+            </div>
+
+            <!-- Trail of Interest -->
+            <div class="form-group">
+              <label for="trailInterest">Trail of Interest <span class="required" aria-label="required">*</span></label>
+              <select id="trailInterest" name="trailInterest" required aria-required="true">
+                <option value="" disabled selected>Select a trail...</option>
+                <option value="ngong-hills">Ngong Hills Trail</option>
+                <option value="karura-forest">Karura Forest Loop</option>
+                <option value="fourteen-falls">Fourteen Falls</option>
+                <option value="longonot">Mt. Longonot Crater Rim</option>
+                <option value="aberdare">Aberdare Waterfall Trek</option>
+                <option value="oloolua">Oloolua Nature Trail</option>
+                <option value="general">General Enquiry</option>
+              </select>
+            </div>
+
+            <!-- Hiker Experience -->
+            <div class="form-group">
+              <label for="experience">Your Hiking Experience</label>
+              <select id="experience" name="experience">
+                <option value="" disabled selected>Select your level...</option>
+                <option value="beginner">Beginner — I'm new to hiking</option>
+                <option value="casual">Casual — I hike a few times a year</option>
+                <option value="regular">Regular — I hike most weekends</option>
+                <option value="experienced">Experienced — I tackle advanced trails</option>
+              </select>
+            </div>
+
+            <!-- Hiking Interests (checkboxes) -->
+            <div class="form-group">
+              <fieldset class="fieldset-clean">
+                <legend class="legend-label">What are you interested in?</legend>
+                <div class="checkbox-group">
+                  <label>
+                    <input type="checkbox" name="interests" value="waterfalls">
+                    Waterfall trails
+                  </label>
+                  <label>
+                    <input type="checkbox" name="interests" value="wildlife">
+                    Wildlife viewing
+                  </label>
+                  <label>
+                    <input type="checkbox" name="interests" value="birdwatching">
+                    Birdwatching
+                  </label>
+                  <label>
+                    <input type="checkbox" name="interests" value="summit">
+                    Summit hikes
+                  </label>
+                  <label>
+                    <input type="checkbox" name="interests" value="family">
+                    Family-friendly trails
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">Your Message <span class="required" aria-label="required">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Ask about trail conditions, transport, group sizes, trail recommendations, or anything else..."
+                required
+                aria-required="true"
+              ></textarea>
+            </div>
+
+            <!-- How did you hear about us? -->
+            <div class="form-group">
+              <label for="referral">How did you find TrailsKE?</label>
+              <select id="referral" name="referral">
+                <option value="" disabled selected>Select one...</option>
+                <option value="google">Google Search</option>
+                <option value="friend">Friend or family recommendation</option>
+                <option value="social">Social media</option>
+                <option value="school">School or university</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message ✉️
+            </button>
+
+          </form>
+        </div>
+
+        <!-- SIDEBAR INFO -->
+        <aside aria-label="Contact information and FAQ">
+
+          <div class="info-box mb-2">
+            <h3>📬 Other Ways to Reach Us</h3>
+            <ul class="info-list">
+              <li>
+                <span aria-hidden="true">📧</span>
+                <span>
+                  <strong>Email:</strong><br>
+                  <a href="/cdn-cgi/l/email-protection#08606d646467487c7a6961647b636d266b6726636d"><span class="__cf_email__" data-cfemail="4e262b2222210e3a3c2f27223d252b602d2160252b">[email&#160;protected]</span></a>
+                </span>
+              </li>
+              <li>
+                <span aria-hidden="true">📍</span>
+                <span>
+                  <strong>Based in:</strong><br>
+                  Nairobi, Kenya
+                </span>
+              </li>
+              <li>
+                <span aria-hidden="true">⏰</span>
+                <span>
+                  <strong>Response time:</strong><br>
+                  Within 2 business days
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-box mb-2">
+            <h3>❓ Frequently Asked Questions</h3>
+            <ul class="info-list">
+              <li><span aria-hidden="true">💬</span>Most trails near Nairobi are free to access — some national parks charge a KWS entry fee.</li>
+              <li><span aria-hidden="true">💬</span>You do not need a guide for Karura Forest, Oloolua, or Ngong Hills — but one is recommended for Longonot and the Aberdares.</li>
+              <li><span aria-hidden="true">💬</span>The best hiking season is June to September (cool, dry) and January to February (warm, clear views).</li>
+              <li><span aria-hidden="true">💬</span>Children over 5 years can comfortably do the Karura Forest loop and Oloolua trail with adults.</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h3>🚨 Emergency Contacts</h3>
+            <ul class="info-list">
+              <li><span aria-hidden="true">🏥</span><strong>Nairobi Hospital:</strong> +254 20 284 5000</li>
+              <li><span aria-hidden="true">🚒</span><strong>Kenya Police:</strong> 999 or 112</li>
+              <li><span aria-hidden="true">🦁</span><strong>KWS Emergency:</strong> +254 20 600 0800</li>
+              <li><span aria-hidden="true">🚑</span><strong>St. John Ambulance:</strong> +254 20 210 0000</li>
+            </ul>
+          </div>
+
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Trails<span>KE</span></span>
+          <p>A hiking trail guide for Nairobi and surrounds. Helping you explore Kenya's outdoors safely and confidently.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trails.html">All Trails</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Trail Types</h2>
+          <ul>
+            <li><a href="trails.html">Easy Trails</a></li>
+            <li><a href="trails.html">Moderate Trails</a></li>
+            <li><a href="trails.html">Hard Trails</a></li>
+            <li><a href="trails.html">Waterfall Trails</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>TrailsKE &copy; <span id="currentYear"></span> — Tiffany Lalampaa | WDD 131 | Nairobi, Kenya</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+/* TrailsKE - Large Screen Stylesheet (Desktop & Tablet Landscape)
+   Author: Tiffany Lalampaa | WDD 131
+   Applied at 768px+ (tablet landscape) and 1024px+ (desktop)
+*/
+
+/* ===== TABLET (landscape) - 768px ===== */
+@media screen and (min-width: 768px) {
+
+  /* Navigation */
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    gap: 0.25rem;
+  }
+
+  .nav-menu a {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    border-left: none;
+    font-size: 0.95rem;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a.active {
+    background: rgba(255,255,255,0.1);
+    border-left-color: transparent;
+    border-bottom-color: var(--terracotta);
+  }
+
+  /* Hero */
+  .hero {
+    padding: 5rem 2rem 4rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Sections */
+  .section {
+    padding: 4rem 2rem;
+  }
+
+  /* Trails Grid - 2 column */
+  .trails-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tips grid - 2 column */
+  .tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Form row - 2 columns */
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Intro grid */
+  .intro-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Contact layout */
+  .contact-layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  /* Modal - center it */
+  .modal-overlay {
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .modal {
+    border-radius: var(--radius-lg);
+    max-width: 600px;
+    animation: scaleIn 0.3s ease;
+  }
+
+  @keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    gap: 0.75rem;
+  }
+}
+
+/* ===== DESKTOP - 1024px ===== */
+@media screen and (min-width: 1024px) {
+
+  /* Nav container */
+  .nav-container {
+    padding: 1rem 2rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 6rem 2rem 5rem;
+    text-align: left;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0;
+  }
+
+  .hero-cta {
+    justify-content: flex-start;
+  }
+
+  .hero-stats {
+    justify-content: flex-start;
+  }
+
+  /* Trails Grid - 3 column */
+  .trails-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Tips grid - 4 column */
+  .tips-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Sections */
+  .section {
+    padding: 5rem 2rem;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  /* Page hero */
+  .page-hero {
+    padding: 4rem 2rem 3rem;
+  }
+
+  /* Form section - slightly wider */
+  .form-section {
+    padding: 2.5rem 3rem;
+  }
+
+  /* Card image height */
+  .card-img-wrap {
+    height: 220px;
+  }
+
+  /* Contact layout - wider sidebar */
+  .contact-layout {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ===== WIDE DESKTOP - 1280px ===== */
+@media screen and (min-width: 1280px) {
+
+  /* Larger hero text */
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  /* More breathing room */
+  .section {
+    padding: 6rem 2rem;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  /* Wider cards */
+  .card-img-wrap {
+    height: 240px;
+  }
+}
+
+/* ===== LANDSCAPE PHONE (orientation) ===== */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+
+  .hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-stats {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .page-hero {
+    padding: 2rem 1.5rem;
+  }
+
+  header {
+    position: relative;
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  header, footer, .filter-bar, .search-wrap, .btn, .hero-cta {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .trail-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

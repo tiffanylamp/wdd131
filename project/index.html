@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrailsKE — Discover Hiking Trails Near Nairobi</title>
+  <meta name="description" content="TrailsKE helps hikers discover the best trails near Nairobi, Kenya — with waterfalls, wildlife, and scenic views. Find difficulty ratings, distances, and directions.">
+  <meta name="author" content="Tiffany Lalampaa | WDD 131">
+  <link rel="stylesheet" href="styles/trails.css">
+  <link rel="stylesheet" href="styles/trails-large.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="TrailsKE Home">
+        <span class="logo-icon" aria-hidden="true">⛰️</span>
+        <span class="logo-text">Trails<span>KE</span></span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome to TrailsKE">
+      <div class="hero-content">
+        <span class="hero-tagline">Kenya's trail guide</span>
+        <h1>Discover Nairobi's Best Hiking Trails</h1>
+        <p>From waterfall walks in Karura Forest to the volcanic crater of Mt. Longonot — your next adventure starts here.</p>
+        <div class="hero-cta">
+          <a href="trails.html" class="btn btn-primary">Explore All Trails</a>
+          <a href="#featured" class="btn btn-outline btn-hero-secondary">Featured Trails</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Trails</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Difficulty Levels</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Waterfalls</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1,795m</span>
+            <span class="stat-label">Base Elevation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section" aria-labelledby="intro-heading">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-label">About TrailsKE</span>
+          <h2 id="intro-heading">Your Local Hiking Guide for Kenya</h2>
+          <p>TrailsKE was created for hikers of all levels — beginners looking for a gentle forest walk, families seeking a waterfall picnic spot, and experienced trekkers chasing volcanic summits.</p>
+          <p>All trails are verified with up-to-date public transport directions, difficulty ratings, and honest tips from experienced local hikers.</p>
+          <ul class="feature-list" aria-label="Key features">
+            <li>Detailed trail profiles with distances and durations</li>
+            <li>Public transport directions from Nairobi CBD</li>
+            <li>Honest difficulty ratings and terrain descriptions</li>
+            <li>Safety tips and seasonal advice</li>
+            <li>Waterfall, wildlife, and birdwatching highlights</li>
+          </ul>
+        </div>
+        <div class="weather-widget" id="weatherWidget" aria-live="polite" aria-label="Current trail weather in Nairobi">
+          <p>Loading weather...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED TRAILS -->
+    <section class="section" id="featured" aria-labelledby="featured-heading">
+      <div class="section-header">
+        <span class="section-label">Handpicked for You</span>
+        <h2 id="featured-heading">Featured Trails</h2>
+        <p>Three of our most popular routes — suitable for a range of abilities and interests.</p>
+      </div>
+      <div class="trails-grid" id="featuredTrailsGrid" aria-label="Featured hiking trails">
+        <p>Loading trails...</p>
+      </div>
+      <div class="text-center mt-2">
+        <a href="trails.html" class="btn btn-primary">View All Trails →</a>
+      </div>
+    </section>
+
+    <!-- PACKING TIPS -->
+    <section class="section section-white" aria-labelledby="tips-heading">
+      <div class="section-header">
+        <span class="section-label">Be Prepared</span>
+        <h2 id="tips-heading">What to Pack for a Day Hike in Kenya</h2>
+        <p>Nairobi's high altitude and changeable weather mean preparation is key. Here's what to bring.</p>
+      </div>
+      <div class="tips-grid" id="tipsGrid" aria-label="Packing tips for Kenya day hikes">
+        <p>Loading tips...</p>
+      </div>
+    </section>
+
+    <!-- SAVED TRAILS -->
+    <section class="section" aria-labelledby="saved-heading">
+      <div class="container">
+        <div class="saved-trails-section" id="savedSection">
+          <h3 id="saved-heading">🔖 Your Saved Trails</h3>
+          <div id="savedList" aria-live="polite" aria-label="Your saved trails list">
+            <p class="empty-saved">No trails saved yet. Click "Save" on any trail to add it here.</p>
+          </div>
+          <p class="saved-note">Saved trails are stored on your device and will appear every time you visit.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Trails<span>KE</span></span>
+          <p>A hiking trail guide for Nairobi and surrounds. Helping you explore Kenya's outdoors safely and confidently.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trails.html">All Trails</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Trail Types</h2>
+          <ul>
+            <li><a href="trails.html">Easy Trails</a></li>
+            <li><a href="trails.html">Moderate Trails</a></li>
+            <li><a href="trails.html">Hard Trails</a></li>
+            <li><a href="trails.html">Waterfall Trails</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>TrailsKE &copy; <span id="currentYear"></span> — Tiffany Lalampaa | WDD 131 | Nairobi, Kenya</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="trailModal" role="dialog" aria-modal="true" aria-label="Trail details">
+    <div class="modal">
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Trails — TrailsKE</title>
+  <meta name="description" content="Browse all hiking trails near Nairobi, Kenya. Filter by difficulty or search by name. Find waterfalls, wildlife, and scenic ridge walks.">
+  <meta name="author" content="Tiffany Lalampaa | WDD 131">
+  <link rel="stylesheet" href="styles/trails.css">
+  <link rel="stylesheet" href="styles/trails-large.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="TrailsKE Home">
+        <span class="logo-icon" aria-hidden="true">⛰️</span>
+        <span class="logo-text">Trails<span>KE</span></span>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trails.html">Trails</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <h1 id="page-title">All Hiking Trails</h1>
+      <p>Explore every trail in our collection — from easy forest walks to challenging volcanic summit hikes.</p>
+    </section>
+
+    <!-- TRAIL LISTINGS -->
+    <section class="section" aria-labelledby="trails-listing-heading">
+      <div class="section-header">
+        <h2 id="trails-listing-heading" class="visually-hidden">Browse Trails</h2>
+
+        <!-- Search -->
+        <div class="search-wrap" role="search">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <label for="trailSearch" class="visually-hidden">Search trails by name, location, or feature</label>
+          <input
+            type="search"
+            id="trailSearch"
+            placeholder="Search trails by name, location, or feature..."
+            aria-label="Search trails"
+            autocomplete="off"
+          >
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar" role="group" aria-label="Filter trails by difficulty or type">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Trails</button>
+          <button class="filter-btn" data-filter="easy" aria-pressed="false">Easy</button>
+          <button class="filter-btn" data-filter="moderate" aria-pressed="false">Moderate</button>
+          <button class="filter-btn" data-filter="hard" aria-pressed="false">Hard</button>
+          <button class="filter-btn" data-filter="waterfall" aria-pressed="false">🌊 Waterfalls</button>
+        </div>
+      </div>
+
+      <!-- Trails Grid -->
+      <div class="trails-grid" id="trailsGrid" aria-label="Hiking trails" aria-live="polite">
+        <p>Loading trails...</p>
+      </div>
+
+      <!-- No results message -->
+      <div class="no-results" id="noResults" role="status">
+        <div class="no-results-icon">🏔️</div>
+        <h2>No trails found</h2>
+        <p>Try adjusting your search or filter to discover more trails.</p>
+        <button class="btn btn-outline mt-2" onclick="resetFilters()">Clear Filters</button>
+      </div>
+    </section>
+
+    <!-- SAVED TRAILS -->
+    <section class="section section-no-top" aria-labelledby="saved-heading">
+      <div class="container">
+        <div class="saved-trails-section" id="savedSection">
+          <h2 id="saved-heading">🔖 Your Saved Trails</h2>
+          <div id="savedList" aria-live="polite" aria-label="Your saved trails list">
+            <p class="empty-saved">No trails saved yet. Click "Save" on any trail card to add it here.</p>
+          </div>
+          <p class="saved-note">Saved trails are stored on your device and will appear every time you visit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAIL INFO BOX -->
+    <section class="section section-white section-no-top">
+      <div class="container">
+        <div class="info-box">
+          <h2>⚠️ Trail Safety Information</h2>
+          <ul class="info-list" aria-label="Trail safety tips">
+            <li><span aria-hidden="true">📢</span>Always tell someone your hiking plan and expected return time before setting out.</li>
+            <li><span aria-hidden="true">🌤️</span>Check the weather forecast the night before — highland trails can experience sudden storms.</li>
+            <li><span aria-hidden="true">👥</span>For solo hikers, trails rated Moderate or above should ideally be done with a partner or group.</li>
+            <li><span aria-hidden="true">🐘</span>Trails in national parks require a Kenya Wildlife Service (KWS) ranger escort. Do not hike alone in these areas.</li>
+            <li><span aria-hidden="true">📵</span>Mobile coverage is unreliable on many trails — download offline maps and tell someone your route.</li>
+            <li><span aria-hidden="true">🚑</span>The nearest major hospital from most trails is Nairobi Hospital (+254 20 284 5000). Save the number before you go.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Trails<span>KE</span></span>
+          <p>A hiking trail guide for Nairobi and surrounds. Helping you explore Kenya's outdoors safely and confidently.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="trails.html">All Trails</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Trail Types</h2>
+          <ul>
+            <li><a href="trails.html">Easy Trails</a></li>
+            <li><a href="trails.html">Moderate Trails</a></li>
+            <li><a href="trails.html">Hard Trails</a></li>
+            <li><a href="trails.html">Waterfall Trails</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>TrailsKE &copy; <span id="currentYear"></span> — Tiffany Lalampaa | WDD 131 | Nairobi, Kenya</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="trailModal" role="dialog" aria-modal="true" aria-label="Trail details">
+    <div class="modal">
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="scripts/main.js"></script>
+  <script>
+    // Reset filters helper (used by No Results button)
+    function resetFilters() {
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.filter === "all");
+      });
+      const searchInput = document.getElementById("trailSearch");
+      if (searchInput) searchInput.value = "";
+      if (window.state) {
+        state.currentFilter = "all";
+        state.searchQuery = "";
+        renderTrails();
+      }
+    }
+  </script>
+</body>
+</html>
