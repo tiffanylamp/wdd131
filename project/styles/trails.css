@@ -1127,7 +1127,6 @@ footer {
   color: var(--green);
 }
 
-/* Modal button row */
 .modal-actions {
   display: flex;
   gap: 0.75rem;
